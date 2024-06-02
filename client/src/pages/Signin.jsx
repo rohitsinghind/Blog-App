@@ -42,7 +42,8 @@ export default function SignIn() {
     }
     // setLoading(false)
     if (res.ok) {
-      dispatch(signInSuccess(data))
+      dispatch(signInSuccess(data?.rest))
+      console.log("data",data)
       return navigate('/')
     }
     } catch (error) {
